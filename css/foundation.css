@@ -37,6 +37,10 @@ html, body {
   background: red; */
 }
 
+.mayusculas{
+  text-transform:uppercase;
+};
+
    #inputs{
     margin-left: 0 auto;
     background: blue;

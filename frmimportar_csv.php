@@ -42,16 +42,16 @@
 </html>
 
 <?php
- 
+ require_once('bd/conexion.php');
 //conexiones, conexiones everywhere
 /*ini_set('display_errors', 1);
 error_reporting(E_ALL);*/
 $db_host = 'localhost';
 $db_user = 'root';
-$db_pass = '';
+$db_pass = ' root';
 $database = 'telefonia';
-$table = 'puerto';
-if(!mysql_connect($db_host, $db_user, $db_pass)){
+
+if(!mysql_connect($server,$username,$password)){
     die("No se pudo establecer conexión a la base de datos");
 }
 

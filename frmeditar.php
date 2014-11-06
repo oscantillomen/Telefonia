@@ -40,13 +40,13 @@
 
       <div id="centrado1" class="centrado large-2 hide">
         <div id="capa11">
-            <select id="padre" class="caja registros">
+            <select id="padre" class="caja registros mayusculas">
               <option value="-1">-Seleccione Registro-</option>
           </select>
           <input type="button" id="btnconsulta_registro" class="button" value="Consultar Registro">
         </div>
         <div id="capa22">
-            <select id="regletas" >
+            <select id="regletas" class="mayusculas">
           </select>
           <input type="button" id="btnconsulta_regleta" class="button" value="Consultar Regleta">
         </div>
