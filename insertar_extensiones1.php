@@ -337,7 +337,7 @@
 	    }
 
 	    if($mensaje==1){
-			$query = "INSERT INTO informacion(num_directorio,nombre,apellido,alveolo,placa_interfaz,direccion_equipo,tipo_terminal,activo,cubiculo,centro_costos,direccion_ip,mac) 
+			$query = "INSERT INTO info(num_directorio,nombre,apellido,alveolo,placa_interfaz,direccion_equipo,tipo_terminal,activo,cubiculo,centro_costos,direccion_ip,mac) 
 					  VALUES('$ext','$nom_dir','$ape_dir','$dir_alveolo','$dir_placa','$dir_equipo','$tipo_terminal','$activo','$cubiculo','$centro_costo','$ip','$mac')";
    			$rs=$con->Execute($query);
 	    };

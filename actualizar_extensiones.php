@@ -293,9 +293,9 @@ $centro_costo = $_POST['centro_costo'];
 	   }
       $rs=null;
       if ($mensaje==1){
-         $query = "UPDATE informacion 
-                   SET apellido='$apellido',nombre='$nombre',alveolo='$dir_alveolo',placa_interfaz='$placa_interfaz',direccion_equipo='$dir_equipo',tipo_terminal='$tipo_terminal',activo='$activo',cubiculo='$cubiculo',centro_costos='$centro_costo',direccion_ip='$ip',mac='$mac'
-                   WHERE num_directorio = '$extension'";
+         $query = "UPDATE info 
+                   SET apellido='$apellido',nombre='$nombre',alveolo='$dir_alveolo',placa_interfaz='$placa_interfaz',direccion_equipo='$dir_equipo',tipo_terminal='$tipo_terminal',activo='$activo',cubiculo='$cubiculo',centro_de_costos='$centro_costo',direccion_ip='$ip',mac='$mac'
+                   WHERE extension = '$extension'";
          $rs=$con->Execute($query);
       };
 	   

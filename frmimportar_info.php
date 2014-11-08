@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
 <head>
-    <title>Importar CSV</title>
+	<title>Importar CSV</title>
       <link rel="SHORTCUT ICON" href="uninorte.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,9 +11,8 @@
     <link rel="stylesheet" href="css/jquery-filestyle.min.css" />
     <img style="width: 303px; height: 146px margin: -55px -216px -112px -140px;" src="images/jpg/logo.jpg" alt="Logo Universidad del Norte."/>
 </head>
-
-<body> 
-    <nav class="top-bar" data-topbar>
+<body>
+	<nav class="top-bar" data-topbar>
 
     <section class="top-bar-section">
       <!-- Right Nav Section  menu lado derecho-->
@@ -36,7 +36,7 @@
    <input type="file" name='sel_file' size='20' class="jfilestyle" data-theme="green">
    <script src="js/jquery-filestyle.min.js"></script>
    <br>
-   <a href="img/Formato CSV Tabla Puertos.xlsx" class="button">Descargar Formato</a>
+   <a href="img/Formato CSV Tabla Informacion.xlsx" class="button">Descargar Formato</a>
   <input type='submit' name='submit' value='Importar CSV' class='button'>
  </form>
  </body>
@@ -75,7 +75,7 @@ if(!mysql_select_db($database))
              while (($data = fgetcsv($handle, 1000, ";")) !== FALSE)
              {
                //Insertamos los datos con los valores...
-                $sql = "INSERT into puerto(pue_extension,rg_entrada,rg_salida,pue_entrada,pue_salida,pue_est_entrada,pue_est_salida,pue_salto) values('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]')";
+                $sql = "INSERT into informacion(extension,apellido,nombre,alveolo,placa_interfaz,direccion_equipo,tipo_terminal,activo,cubiculo,centro_de_costos,direccion_ip,mac) values('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]','$data[8]','$data[9]','$data[10]','$data[11]')";
                 mysql_query($sql) or die(mysql_error());
              }
              //cerramos la lectura del archivo "abrir archivo" con un "cerrar archivo"
@@ -91,3 +91,5 @@ if(!mysql_select_db($database))
     }
      
     ?>
+</body>
+</html>
