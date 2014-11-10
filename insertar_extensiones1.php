@@ -58,17 +58,17 @@
 	$pts9   = $_POST['pt99'];
 	$pts10  = $_POST['pt100'];
 
-	$ape_dir = $_POST['ape_dir'];
-	$nom_dir = $_POST['nom_dir'];
-	$dir_alveolo = $_POST['dir_alveolo'];
-	$dir_placa = $_POST['dir_placa'];
-	$dir_equipo = $_POST['dir_equipo'];
+	$ape_dir       = utf8_encode($_POST['ape_dir']);
+	$nom_dir       = utf8_encode($_POST['nom_dir']);
+	$dir_alveolo   = $_POST['dir_alveolo'];
+	$dir_placa     = $_POST['dir_placa'];
+	$dir_equipo    = utf8_encode($_POST['dir_equipo']);
 	$tipo_terminal = $_POST['tipo_terminal'];
-	$activo = $_POST['activo'];
-	$cubiculo = $_POST['cubiculo'];
-	$ip = $_POST['ip'];
-	$centro_costo = $_POST['centro_costo'];
-	$mac = $_POST['mac'];
+	$activo        = $_POST['activo'];
+	$cubiculo      = utf8_encode($_POST['cubiculo']);
+	$ip            = $_POST['ip'];
+	$centro_costo  = utf8_encode($_POST['centro_costo']);
+	$mac           = $_POST['mac'];
 	$mensaje;
 
 	
@@ -337,7 +337,7 @@
 	    }
 
 	    if($mensaje==1){
-			$query = "INSERT INTO info(num_directorio,nombre,apellido,alveolo,placa_interfaz,direccion_equipo,tipo_terminal,activo,cubiculo,centro_costos,direccion_ip,mac) 
+			$query = "INSERT INTO info(extension,nombre,apellido,alveolo,placa_interfaz,direccion_equipo,tipo_terminal,activo,cubiculo,centro_de_costos,direccion_ip,mac) 
 					  VALUES('$ext','$nom_dir','$ape_dir','$dir_alveolo','$dir_placa','$dir_equipo','$tipo_terminal','$activo','$cubiculo','$centro_costo','$ip','$mac')";
    			$rs=$con->Execute($query);
 	    };

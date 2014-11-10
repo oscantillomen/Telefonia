@@ -23,9 +23,14 @@
 				$nombre    = mb_convert_case($nombre, MB_CASE_UPPER, "UTF-8");
 				$ubicacion = mb_convert_case($ubicacion, MB_CASE_UPPER, "UTF-8");
 
+				
+				
 				$query = "INSERT INTO registros(rgo_nombre,rgo_ubicacion,rgo_estado,rgo_cod_padre) VALUES('$nombre','$ubicacion','1','$padre')" or die("Error in the consult.." . mysqli_error($query)); 
-			//ejecutar query. 
 			    $resultado = mysql_query($query,$conexion);
+			//ejecutar query. 
+			    $query = null;
+			    $query = "INSERT INTO padres(pad_nombre) VALUES('$nombre')" or die("Error in the consult.." . mysqli_error($query)); 
+			    $result    = mysql_query($query,$conexion);
 			    echo"1";
 		}
 	} catch (Exception $e) {

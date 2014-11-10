@@ -31,6 +31,10 @@ meta.foundation-data-attribute-namespace {
 html, body {
   height: 100%; }
 
+.mayuscula{
+ text-transform:uppercase;
+}
+
 #informacion{
   width: 100%;
   height: 20%;/* 
